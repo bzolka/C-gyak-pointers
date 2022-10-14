@@ -127,7 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CallStack.cpp" />
     <ClCompile Include="CppApp.cpp" />
+    <ClCompile Include="Factorial.cpp" />
     <ClCompile Include="Old.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

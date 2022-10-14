@@ -21,5 +21,11 @@
     <ClCompile Include="Old.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Factorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CallStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

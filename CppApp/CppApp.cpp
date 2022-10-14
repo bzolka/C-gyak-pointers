@@ -8,14 +8,18 @@ void Pointer_alapok();
 void Pointerek_aritmetika_illetve_tömbök();
 void Pointerek_PlusPlus();
 void Pointerek_Haladobb();
+void Factorial_Recursive_Demo();
+void DemoCallStack();
 
 int main()
 {
-	PrefixAndPostFix_PlusPlus();
-	Pointer_alapok();
-	Pointerek_aritmetika_illetve_tömbök();
-	Pointerek_PlusPlus();
-	Pointerek_Haladobb();
+	//DemoCallStack();
+	Factorial_Recursive_Demo();
+	//PrefixAndPostFix_PlusPlus();
+	//Pointer_alapok();
+	//Pointerek_aritmetika_illetve_tömbök();
+	//Pointerek_PlusPlus();
+	//Pointerek_Haladobb();
 }
 
 void PrefixAndPostFix_PlusPlus()
@@ -99,7 +103,7 @@ void Pointerek_aritmetika_illetve_tömbök()
 	// Szabály: a tömb neve az első elem címe!!!
 
 	// A nums itt 10 darab 4 bájtos int egymás mellett.
-	 int nums[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+	 int nums[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
 	// Lényeges, hogy a nums az első elem címét JELENTI (de csak JELENTI, a nums nem egy különálló
 	// pointer, így külön 4 bájtos pointer NEM foglalódik neki - ez fontos!)
 
@@ -131,8 +135,9 @@ void Pointerek_aritmetika_illetve_tömbök()
 	// Szabály: a tömbök nevére is érvényes a pointer artimetika (hiszen a tömb neve az első elem címe),
 	// illetve a pointerekre is lehet tömbindexelést használni. A pontos szabály (ezt NAGYON KELL tudni,
 	// de logikus is):
+	// *****************************************************
 	// p[i] ekv. nums[i] ekv. *(p + i) ekv.  ekv. *(nums + i)
-
+	// *****************************************************
 	// Példák, ezek mind egyenértékűek:
 	x = nums[2];
 	x = p[2];
@@ -199,11 +204,12 @@ void Pointerek_Haladobb()
 	// Pointerek pointerekre (mutatók mutatókra)
 	// Egy pointer mutathat bármire: intre, char-ra, de akár egy másik pointerre is
 	// Pl. ez egy olyan mutató, mely egy int mutatóra mutat:
-	int x;
+	int x=10;
 	int* p = &x;
 	int** pp = &p; // Itt p egy olyan mutató, mely egy int mutatóra mutat.
 	// p-ben x címe, pp-ben p címe van, így talán könyebb elképzelni.
 	// Három memóriarekeszünk van: egy x-nek, egy p-nek, egy pp-nek.
+	**pp = 20;
 	}
 
 	{
